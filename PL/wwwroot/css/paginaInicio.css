@@ -1,0 +1,131 @@
+﻿@font-face {
+    font-family: 'Encode Sans';
+    src: url(/css/fonts/EncodeSans-VariableFont_wdth,wght.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Encode Sans', sans-serif;
+    background: #f2f2f3;
+    min-height: 100vh;
+    margin: 0;
+    color: #000000;
+}
+
+.sidebar {
+    width: 240px;
+    min-width: 240px;
+    height: 100vh;
+    background-color: #ffffff;
+    color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1050; 
+    scrollbar-width: thin;
+    box-shadow: rgba(0,0,0,0.1) 1px 4px 10px;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.logo-ps-side-bar img {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+.nav-item {
+    padding: 0.55rem 0.6rem;
+    color: #000000;
+    font-size: 1rem;
+    text-decoration: none;
+    line-height: 1.2;
+    min-height: 42px;
+    border: 0;
+    background: transparent;
+    width: 100%;
+    text-align: left;
+    transition: 0.2s ease;
+    border-radius: 10px;
+}
+
+.active {
+    background: #00ae42;
+    color: #fff;
+}
+
+.nav-item:hover {
+    background: rgba(0,174,66,0.5);
+    color: #fff;
+}
+
+.btn-light.custom-hover:hover {
+    background: rgba(0,174,66,0.2) !important;
+    color: #00ae42 !important;
+}
+
+.main-content {
+    margin-left: 240px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.top-bar {
+    min-height: 70px;
+    z-index: 999;
+    background-color: #f2f2f3; 
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.text-insured {
+    color: grey;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.welcome {
+    font-size: 1.15rem;
+    color: #000000;
+}
+
+.landing-page-body {
+    padding: 1rem 2rem;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+        .sidebar.show {
+            transform: translateX(0);
+        }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .text-insured {
+        font-size: 0.95rem;
+    }
+
+    .badge-policy-type {
+        font-size: 0.75rem;
+    }
+
+    .welcome {
+        font-size: 1rem;
+    }
+
+    .landing-page-body {
+        padding: 1rem;
+    }
+}
